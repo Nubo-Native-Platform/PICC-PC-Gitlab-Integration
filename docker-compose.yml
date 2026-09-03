@@ -1,0 +1,27 @@
+services:
+  gitlab-integration:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gitlab-integration
+    ports:
+      - "${SERVER_PORT:-8080}:8080"
+    environment:
+      - SERVER_PORT=${SERVER_PORT:-8080}
+      - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE:-main}
+      - FEIGN_NAME=${FEIGN_NAME:-gitlab-client}
+      - FEIGN_URL=${FEIGN_URL:-https://gitlab.example.com}
+      - FEIGN_URL_API=${FEIGN_URL_API:-/api/v4}
+      - FEIGN_APITOKEN=${FEIGN_APITOKEN:-glpat-yourSecretAdminTokenHere}
+      - NNP_FEIGN_NAME=${NNP_FEIGN_NAME:-nnp-gitlab-client}
+      - NNP_FEIGN_URL=${NNP_FEIGN_URL:-https://gitlab.example.com}
+      - NNP_FEIGN_APITOKEN=${NNP_FEIGN_APITOKEN:-}
+      - HAZELCAST_PORT=${HAZELCAST_PORT:-5701}
+      - CACHE_REFRESH_CRON=${CACHE_REFRESH_CRON:-0 0 * * * *}
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
