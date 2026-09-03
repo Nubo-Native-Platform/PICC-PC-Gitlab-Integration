@@ -278,7 +278,7 @@ glpat-xYz9876543210AbCdEfGhIjKlMnOpQrStUv
 
 ```bash
 # Clone the repository
-git clone https://github.com/nubons/PICC-PC-Gitlab-Integration.git
+git clone https://github.com/Nubo-Native-Platform/PICC-PC-Gitlab-Integration.git
 cd PICC-PC-Gitlab-Integration
 
 # Validate POM and configurations
@@ -343,8 +343,8 @@ cp .env.example .env
 # 2. Configure your FEIGN_URL and FEIGN_APITOKEN in .env
 nano .env
 
-# 3. Start the service with Docker Compose
-docker compose up -d
+# 3. Build and start the service with Docker Compose
+docker compose up -d --build
 
 # 4. View application logs
 docker compose logs -f gitlab-integration
@@ -380,7 +380,7 @@ spec:
     spec:
       containers:
         - name: gitlab-integration
-          image: ghcr.io/nubons/picc-pc-gitlab-integration:0.0.1
+          image: picc-pc-gitlab-integration:latest # Built locally via Dockerfile, or replace with your private registry image
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080

@@ -35,7 +35,7 @@ Enterprise GitLab REST API v4 integration microservice establishing standard use
 
 **`PICC-PC-Gitlab-Integration`** provides a resilient, declarative integration gateway between internal platform services and the **GitLab REST API v4**. It automates identity lifecycle management, multi-tier group and subgroup hierarchies, repository initialization, and personal access token (PAT) provisioning while maximizing throughput via embedded loopback **Hazelcast 5.5** caching.
 
-Inheriting from the platform's standardized BOM ([`PICC-PC-Abstract-NNP-Platform`](https://github.com/nubons/PICC-PC-Abstract-NNP-Platform)), `PICC-PC-Gitlab-Integration` enforces Java 21 LTS runtime standards, Spring Cloud OpenFeign patterns, and automated DevSecOps compliance scanning.
+Inheriting from the platform's standardized BOM ([`PICC-PC-Abstract-NNP-Platform`](https://github.com/Nubo-Native-Platform/PICC-PC-Abstract-NNP-Platform)), `PICC-PC-Gitlab-Integration` enforces Java 21 LTS runtime standards, Spring Cloud OpenFeign patterns, and automated DevSecOps compliance scanning.
 
 ---
 
@@ -134,7 +134,7 @@ hazelcast.port=5701
 
 ```bash
 # Clone the repository
-git clone https://github.com/nubons/PICC-PC-Gitlab-Integration.git
+git clone https://github.com/Nubo-Native-Platform/PICC-PC-Gitlab-Integration.git
 cd PICC-PC-Gitlab-Integration
 
 # Validate POM structure
