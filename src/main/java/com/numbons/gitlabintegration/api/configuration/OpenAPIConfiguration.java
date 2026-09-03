@@ -33,7 +33,7 @@ public class OpenAPIConfiguration {
                         .contact(new Contact()
                                 .name("Nubo Native Platform Team")
                                 .email("contribution@nubons.com")
-                                .url("https://github.com/nubons/PICC-PC-Gitlab-Integration"))
+                                .url("https://github.com/Nubo-Native-Platform/PICC-PC-Gitlab-Integration"))
                         .license(new License()
                                 .name("Apache License 2.0")
                                 .url("https://www.apache.org/licenses/LICENSE-2.0")))

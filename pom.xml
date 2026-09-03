@@ -17,7 +17,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>PICC-PC-Gitlab-Integration</name>
     <description>Enterprise GitLab REST API v4 Integration Microservice for Nubo Native Platform (NNP)</description>
-    <url>https://github.com/nubons/PICC-PC-Gitlab-Integration</url>
+    <url>https://github.com/Nubo-Native-Platform/PICC-PC-Gitlab-Integration</url>
 
     <properties>
         <java.version>21</java.version>
@@ -225,12 +225,12 @@
                 <repository>
                     <id>github</id>
                     <name>GitHub Packages</name>
-                    <url>https://maven.pkg.github.com/nubons/PICC-PC-Gitlab-Integration</url>
+                    <url>https://maven.pkg.github.com/Nubo-Native-Platform/PICC-PC-Gitlab-Integration</url>
                 </repository>
                 <snapshotRepository>
                     <id>github</id>
                     <name>GitHub Packages Snapshots</name>
-                    <url>https://maven.pkg.github.com/nubons/PICC-PC-Gitlab-Integration</url>
+                    <url>https://maven.pkg.github.com/Nubo-Native-Platform/PICC-PC-Gitlab-Integration</url>
                 </snapshotRepository>
             </distributionManagement>
         </profile>
