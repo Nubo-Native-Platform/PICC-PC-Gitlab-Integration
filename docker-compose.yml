@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: picc-pc-gitlab-integration:latest
     container_name: gitlab-integration
     ports:
       - "${SERVER_PORT:-8080}:8080"
