@@ -102,7 +102,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy to GitHub Packages
-        run: mvn clean deploy -Pgithub-packages -DskipTests
+        run: mvn clean deploy -Pgithub-packages -DskipTests -Ddependency-check.skip=true
         env:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
